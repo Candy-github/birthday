@@ -35,6 +35,22 @@
 </head>
 
 <body>
+
+<script>
+document.getElementById("demo").addEventListener("click", function(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  var coor = "X coords: " + x + ", Y coords: " + y;
+  var textnode = document.createTextNode("Hello");
+  var node = document.createElement("P");
+  node.appendChild(textnode);
+  node.style.position = "absolute";
+  node.style.left = x + 'px';
+  node.style.top = y + 'px';
+  document.body.appendChild(node);
+});
+</script>
+    
 <div class="loading"></div>
 <audio class="song" controls loop>
     <source src="assets/hbd.mp3"></source>
