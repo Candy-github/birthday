@@ -196,7 +196,44 @@ $('document').ready(function(){
 			$('#mine').fadeIn('slow');
 		});
 
+
 	
+	});
+
+
+
+	$('#mine')click(function() {
+	// 获取音频元素
+	var audio = document.querySelector('.song');
+	var endAudio = new Audio('rrr.mp3'); // 创建新的音频元素
+
+	// 获取 "𝒯ℋℰ ℰ𝒩𝒟" 按钮元素
+	var mineButton = document.getElementById('mine');
+
+    	// 如果当前音频正在播放，淡出并停止
+    	if (!audio.paused) {
+        	var fadeOutInterval = setInterval(function() {
+           	 var volume = audio.volume - 0.1; // 调整音量，可以根据需要更改
+           	 if (volume <= 0) {
+           	     clearInterval(fadeOutInterval);
+         	       audio.pause();
+            	} else {
+                	audio.volume = volume;
+            	}
+        	}, 100); // 调整间隔时间，以控制淡出速度
+    	}
+    
+    	// 播放新音频，并淡入
+    	endAudio.volume = 0;
+    	endAudio.play();
+    	var fadeInInterval = setInterval(function() {
+        	var volume = endAudio.volume + 0.1; // 调整音量，可以根据需要更改
+        	if (volume >= 1) {
+            	clearInterval(fadeInInterval);
+        	} else {
+            	endAudio.volume = volume;
+        	}
+    	}, 100); // 调整间隔时间，以控制淡入速度
 	});
 
 	
