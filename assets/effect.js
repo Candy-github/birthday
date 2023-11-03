@@ -202,7 +202,7 @@ $('document').ready(function(){
 
 
 
-	$('#mine')click(function() {
+	$('#mine').click(function() {
 	// 获取音频元素
 	var audio = document.querySelector('.song');
 	var endAudio = new Audio('rrr.mp3'); // 创建新的音频元素
