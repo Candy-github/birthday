@@ -201,7 +201,7 @@ $('document').ready(function(){
 	$('#mine').click(function() {
 	// 获取音频元素
 	var audio = document.querySelector('.song');
-	var endAudio = new Audio('rrr.mp3'); // 创建新的音频元素
+	var endAudio = new Audio('kkk.mp3'); // 创建新的音频元素
 
 	// 获取 "𝒯ℋℰ ℰ𝒩𝒟" 按钮元素
 	var mineButton = document.getElementById('mine');
