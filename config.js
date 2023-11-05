@@ -62,7 +62,7 @@ var config = {
      */
     imgs: {
         "今天是你的生日(≧▽≦)": "a.png",
-        "咳咳,笑话太冷了": "nuan.png",
+        "咳咳,笑话太冷了": "nuan2.png",
     },
     // 按钮文字描述, 以下是默认的按钮文字，英文的，您可以改成你喜欢的文字
     desc: {
@@ -73,6 +73,6 @@ var config = {
         cake_fadein: "蛋糕？",
         light_candle: "蜡烛？",
         wish_message: "დ生日快乐დ",
-        story: "𝒜 ℳℰ𝒮𝒮𝒜𝒢ℰ ℱ𝒪ℛ 𝒴𝒪𝒰 ✎",
+        story: "🅐 ​🅜🅔🅢🅢🅐🅖🅔 🅕🅞🅡 ​🅨🅞🅤 ✎",
     }
 };
