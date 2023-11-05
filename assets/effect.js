@@ -199,6 +199,7 @@ $('document').ready(function(){
 
 
 	$('#mine').click(function() {
+	$(this).fadeOut('slow');
 	// 获取音频元素
 	var audio = document.querySelector('.song');
 	var endAudio = new Audio('kkk.mp3'); // 创建新的音频元素
