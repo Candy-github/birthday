@@ -34,11 +34,45 @@
     <script src="config.js"></script>
 
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+	
+<style>
+        /* 添加背景变暗样式 */
+        body {
+            transition: background-color 0.5s ease; /* 使用过渡效果使背景逐渐变暗 */
+        }
+        /* 星星效果样式 */
+        .star {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: twinkle 1s infinite alternate; /* 星星闪烁动画 */
+        }
+        /* 星星闪烁动画 */
+        @keyframes twinkle {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+
+	
 </head>
 
 
     
 <body>
+
+<!-- 星星容器 -->
+    <div id="stars"></div>
+	
 <div class="loading"></div>
 <audio class="song" controls loop>
     <source src="assets/hbd.mp3"></source>
@@ -134,6 +168,41 @@
         </div>
     </div>
 
+
+<script>
+        // 获取按钮元素和星星容器
+        const button = document.getElementById('mine');
+        const starsContainer = document.getElementById('stars');
+
+        // 按钮点击事件
+        button.addEventListener('click', function() {
+            // 生成星星
+            generateStars();
+            // 背景逐渐变暗
+            document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        });
+
+        // 生成星星函数
+        function generateStars() {
+            // 循环生成多颗星星
+            for (let i = 0; i < 100; i++) { // 可以根据需要调整星星数量
+                // 创建星星元素
+                const star = document.createElement('div');
+                star.className = 'star';
+                // 设置星星位置
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+                star.style.left = x + 'px';
+                star.style.top = y + 'px';
+                // 设置星星不同的闪烁延迟
+                const delay = Math.random() * 1; // 在 0 到 1 秒之间随机选择
+                star.style.animationDelay = delay + 's';
+                // 将星星添加到容器中
+                starsContainer.appendChild(star);
+            }
+        }
+    </script>
+	
 
 </div>
 </body>
